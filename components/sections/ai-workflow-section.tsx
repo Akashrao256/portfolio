@@ -9,8 +9,8 @@ export function AiWorkflowSection() {
           Using AI as a structured engineering partner
         </h3>
         <p className="mt-4 text-base leading-8 text-muted">
-          The workflow centers on using AI tools to accelerate development while keeping architecture,
-          correctness, and maintainability under manual review.
+          AI is used to accelerate implementation, but every output is reviewed against architecture,
+          correctness, maintainability, and production readiness.
         </p>
       </div>
 

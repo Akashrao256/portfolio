@@ -3,10 +3,9 @@ import { ButtonLink } from "@/components/ui/button-link";
 
 type ProjectCardProps = {
   title: string;
-  subtitle: string;
-  meta: string;
+  type: string;
   role: string;
-  bullets: string[];
+  highlights: string[];
   problem: string;
   approach: string;
   solution: string;
@@ -15,10 +14,9 @@ type ProjectCardProps = {
 
 export const ProjectCard = memo(function ProjectCard({
   title,
-  subtitle,
-  meta,
+  type,
   role,
-  bullets,
+  highlights,
   problem,
   approach,
   solution,
@@ -28,29 +26,25 @@ export const ProjectCard = memo(function ProjectCard({
     <article className="surface-card surface-card-hover overflow-hidden p-5 sm:p-7">
       <div className="flex flex-col gap-5 border-b border-line pb-6 lg:flex-row lg:items-start lg:justify-between">
         <div>
-          <p className="eyebrow">{meta}</p>
+          <p className="eyebrow">Project Case Study</p>
           <h3 className="mt-3 text-[2rem] leading-none text-ink sm:text-[2.35rem]">{title}</h3>
-          <p className="mt-2 text-base leading-7 text-muted">{subtitle}</p>
-        </div>
-
-        <div className="surface-muted px-4 py-3 text-sm text-muted">
-          <span className="font-semibold text-ink">Role:</span> {role}
+          <p className="mt-3 max-w-3xl text-base leading-7 text-muted">
+            Structured backend-focused implementation with clear problem framing, system approach, and outcome.
+          </p>
         </div>
       </div>
 
-      <div className="grid gap-6 pt-6 xl:grid-cols-[0.88fr_1.12fr]">
+      <div className="grid gap-6 pt-6 xl:grid-cols-[0.9fr_1.1fr]">
         <div className="space-y-5">
-          <div className="surface-muted p-4">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-muted">Project Summary</p>
-            <p className="mt-3 text-base leading-7 text-ink">
-              Backend-led implementation focused on reliability, integration quality, and maintainable API design.
-            </p>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <ContentBlock label="Type" content={type} tone="strong" />
+            <ContentBlock label="Role" content={role} tone="strong" />
           </div>
 
           <div>
-            <h4 className="text-lg text-ink">Highlights</h4>
+            <h4 className="text-lg text-ink">Implementation Highlights</h4>
             <ul className="mt-3 space-y-3 text-sm leading-6 text-muted">
-              {bullets.map((bullet) => (
+              {highlights.map((bullet) => (
                 <li key={bullet} className="surface-muted px-4 py-3">
                   {bullet}
                 </li>
@@ -79,11 +73,25 @@ export const ProjectCard = memo(function ProjectCard({
   );
 });
 
-function ContentBlock({ label, content }: { label: string; content: string }) {
+function ContentBlock({
+  label,
+  content,
+  tone = "default",
+}: {
+  label: string;
+  content: string;
+  tone?: "default" | "strong";
+}) {
   return (
-    <div className="surface-muted p-4 transition-colors duration-200 hover:bg-white">
+    <div
+      className={`surface-muted p-4 transition-colors duration-200 hover:bg-white ${
+        tone === "strong" ? "bg-white" : ""
+      }`}
+    >
       <p className="eyebrow">{label}</p>
-      <p className="mt-3 text-sm leading-7 text-muted">{content}</p>
+      <p className={`mt-3 leading-7 ${tone === "strong" ? "text-base text-ink" : "text-sm text-muted"}`}>
+        {content}
+      </p>
     </div>
   );
 }

@@ -1,9 +1,8 @@
 export const person = {
   name: "J Akash Rao",
   role: "Backend-Focused Full Stack Developer",
-  headline: "Backend-Focused Full Stack Developer (MERN + Spring Boot)",
-  tagline:
-    "Building scalable backend systems with API design, authentication, and AI-assisted workflows",
+  headline: "Building scalable API systems using MERN and Spring Boot",
+  tagline: "Focused on authentication, backend architecture, and real-world systems",
   email: "akashrao.creates@gmail.com",
 };
 
@@ -14,78 +13,78 @@ export const heroActions = [
 
 export const projects = [
   {
-    title: "Civix",
-    subtitle: "Digital Civic Engagement Platform",
-    meta: "Infosys Springboard Internship Project",
+    title: "Civix - Digital Civic Engagement Platform",
+    type: "Internship Project (Infosys Springboard)",
     role: "Backend Developer (MERN Stack)",
-    bullets: [
+    highlights: [
       "Developed REST APIs using Node.js and Express",
-      "Integrated MongoDB Atlas for cloud-hosted data storage",
-      "Implemented JWT authentication and request validation",
-      "Worked on backend logic and API integration",
+      "MongoDB Atlas integration",
+      "Implemented JWT authentication and validation",
+      "Contributed to backend system design",
     ],
     problem:
-      "Civic engagement workflows are often fragmented, making it hard for users to participate through a reliable digital platform.",
+      "The Civix platform needed a secure backend foundation for civic participation workflows, with reliable APIs and authentication supporting a broader internship-built product rather than an individual side project.",
     approach:
-      "Designed the backend around structured API contracts, secure authentication flows, and clean data access patterns in the MERN stack.",
+      "Focused on backend API design, authentication flows, request validation, and MongoDB-backed data handling inside the existing MERN application architecture.",
     solution:
-      "Built backend services that support user authentication, data persistence, and API-driven platform interactions with Node.js, Express, and MongoDB Atlas.",
+      "Built and integrated REST APIs using Node.js and Express, connected the platform to MongoDB Atlas, and implemented JWT-based authentication and validation for secure request handling.",
     outcome:
-      "Created a stable backend foundation for a civic engagement product while strengthening production-style API and authentication practices.",
+      "Delivered backend functionality that strengthened the internship team project with cleaner API flows, secure authentication, and a more dependable system foundation for civic engagement use cases.",
   },
   {
     title: "Data Visualization & Insights Platform",
-    subtitle: "Analytics and Reporting Workspace",
-    meta: "Backend + Data Processing Project",
+    type: "Full Stack Project",
     role: "Full Stack Developer",
-    bullets: [
-      "Upload CSV and JSON datasets",
-      "Built REST APIs for ingestion and processing",
-      "Supported interactive charts and visual reporting",
-      "Enabled filtering and aggregation workflows",
+    highlights: [
+      "CSV and JSON dataset upload workflows",
+      "REST APIs for ingestion and processing",
+      "Interactive charts and reporting views",
+      "Filtering and aggregation support",
     ],
     problem:
-      "Raw datasets are difficult to explore without a structured way to process, filter, and present insights visually.",
+      "Raw CSV and JSON files are difficult to explore without a backend system that can process uploaded data and expose clean interfaces for analysis.",
     approach:
-      "Focused on API-first ingestion and transformation flows so datasets could move cleanly from upload to analysis-ready views.",
+      "Took an API-first approach that separated upload handling, dataset processing, and queryable results so the platform could support interactive visual analysis.",
     solution:
-      "Developed a platform that accepts CSV and JSON uploads, processes records through REST endpoints, and exposes structured data for charting, filtering, and aggregation.",
+      "Built dataset ingestion and processing APIs that transform uploaded files into structured records ready for charting, filtering, and aggregation.",
     outcome:
-      "Improved dataset usability by turning raw files into interactive insight workflows that support faster analysis and reporting.",
+      "Turned static datasets into an analysis workflow that supports clearer insight generation and more usable reporting interfaces.",
   },
   {
     title: "Cloud-Based Fraud Detection System",
-    subtitle: "Rule-Driven Transaction Monitoring",
-    meta: "Java + Spring Boot Project",
+    type: "Backend Project",
     role: "Backend Developer",
-    bullets: [
-      "Built the backend using Java and Spring Boot",
-      "Implemented rule-based fraud detection logic",
-      "Integrated a SQL database for persistence",
-      "Structured the service for backend extensibility",
+    highlights: [
+      "Java and Spring Boot backend services",
+      "Rule-based fraud detection logic",
+      "SQL database integration",
+      "Backend design for extensibility",
     ],
     problem:
-      "Fraud detection systems need dependable backend workflows that can flag suspicious activity consistently and explainably.",
+      "Fraud monitoring requires backend workflows that can evaluate transactions consistently, store results reliably, and keep detection logic maintainable.",
     approach:
-      "Used a rules-first backend design to keep detection logic explicit, maintainable, and easy to evolve over time.",
+      "Used a rules-first service design so fraud checks remained explicit, testable, and easier to extend as detection requirements evolve.",
     solution:
-      "Developed a Spring Boot backend backed by a SQL database to process events and evaluate transactions against fraud detection rules.",
+      "Developed a Spring Boot backend with SQL persistence to process transaction data and evaluate events against fraud detection rules.",
     outcome:
-      "Delivered a practical backend prototype for fraud monitoring while reinforcing Java service design and database integration skills.",
+      "Produced a backend-oriented fraud detection prototype that demonstrates Java service design, persistence integration, and structured business logic.",
   },
 ];
 
 export const skillGroups = [
   {
     title: "MERN Stack",
-    items: ["React", "Node.js", "Express", "MongoDB"],
+    description: "For API development, integrations, and full stack delivery in JavaScript ecosystems.",
+    items: ["React.js", "Node.js", "Express.js", "MongoDB"],
   },
   {
     title: "Java Stack",
+    description: "For structured backend services, business logic, and database-driven applications.",
     items: ["Java", "Spring Boot", "MySQL"],
   },
   {
-    title: "Other",
+    title: "Core Backend Skills",
+    description: "Supporting capabilities that strengthen backend engineering and system implementation.",
     items: [
       "REST APIs",
       "JWT Authentication",
@@ -98,12 +97,12 @@ export const skillGroups = [
 export const experiences = [
   {
     company: "Infosys Springboard",
-    role: "Backend Developer",
+    role: "Backend Developer (Internship)",
     period: "Internship Experience",
     points: [
       "Built APIs for the Civix platform",
-      "Worked with MongoDB Atlas for cloud data storage",
-      "Implemented JWT authentication flows",
+      "Implemented JWT authentication",
+      "Worked with MongoDB Atlas",
     ],
   },
   {
@@ -125,10 +124,10 @@ export const certifications = [
 ];
 
 export const workflowItems = [
-  "Using Codex and Cursor to accelerate development workflows",
-  "Writing structured prompts for implementation, debugging, and iteration",
-  "Using AI to support debugging and refactoring tasks",
-  "Validating AI-generated code before integrating it into projects",
+  "Use AI tools such as Codex and Cursor for structured code generation and implementation support",
+  "Apply a problem-first prompting approach before generating code",
+  "Validate and refine all AI-generated code before integration",
+  "Focus on production-ready architecture, maintainability, and code quality",
 ];
 
 export const currentlyBuilding = [
@@ -139,6 +138,16 @@ export const currentlyBuilding = [
 
 export const contactLinks = [
   { label: "Email", value: person.email, href: `mailto:${person.email}` },
-  { label: "GitHub", value: "#", href: "#" },
-  { label: "LinkedIn", value: "#", href: "#" },
+
+  { 
+    label: "GitHub", 
+    value: "github.com/Akashrao256", 
+    href: "https://github.com/Akashrao256" 
+  },
+
+  { 
+    label: "LinkedIn", 
+    value: "linkedin.com/in/j-akash-rao", 
+    href: "https://www.linkedin.com/in/j-akash-rao-926844305/" 
+  },
 ];

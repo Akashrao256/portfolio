@@ -5,18 +5,20 @@ export function AboutSection() {
         <p className="eyebrow">Story</p>
         <div className="mt-4 space-y-4 text-base leading-8 text-muted">
           <p>
-            I am a backend-focused developer who enjoys building systems that do real work: APIs,
-            authentication flows, data processing pipelines, and application logic that has to be
-            reliable under real-world usage.
+            I am a backend-focused full stack developer specializing in building scalable API systems
+            using Node.js and Spring Boot.
           </p>
           <p>
-            My work spans Node.js in the MERN ecosystem and Java with Spring Boot, which lets me move
-            comfortably between modern JavaScript backends and strongly structured Java services.
+            I focus on designing clean architectures, implementing secure authentication systems, and
+            developing reliable backend logic for real-world applications.
           </p>
           <p>
-            I care about clean architecture, maintainable backend logic, and designing systems that are
-            understandable as they grow. That mindset shapes how I approach every project, from civic
-            platforms to analytics tools to fraud detection systems.
+            I leverage AI-assisted development workflows to accelerate building and refining
+            production-ready systems while maintaining code quality.
+          </p>
+          <p>
+            My goal is to build systems that are scalable, maintainable, and aligned with real-world
+            engineering practices.
           </p>
         </div>
       </div>
