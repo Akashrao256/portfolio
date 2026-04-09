@@ -1,8 +1,8 @@
 export const person = {
   name: "J Akash Rao",
   role: "Backend-Focused Full Stack Developer",
-  headline: "Designing secure API systems and backend workflows for real-world products",
-  tagline: "Node.js, MERN, and Spring Boot focused on authentication, system structure, and reliable delivery",
+  headline: "Designing and building scalable backend systems across MERN and Spring Boot ecosystems",
+  tagline: "Focused on authentication, backend architecture, and reliable real-world systems",
   email: "akashrao.creates@gmail.com",
 };
 
