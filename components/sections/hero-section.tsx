@@ -5,18 +5,25 @@ export function HeroSection() {
   return (
     <div className="grid gap-6 lg:grid-cols-[1.14fr_0.86fr]">
       <div className="surface-card p-6 sm:p-8 lg:p-10">
-        <p className="eyebrow">J Akash Rao</p>
-        <h3 className="mt-4 text-4xl leading-[0.98] text-ink sm:text-5xl lg:text-[4.2rem]">
-          {person.role}
-        </h3>
-        <p className="mt-6 max-w-3xl text-2xl leading-9 text-[#2f2a25] sm:text-[2rem] sm:leading-[1.35]">
+        <p className="eyebrow">{person.role}</p>
+        <h3 className="mt-5 max-w-4xl text-[2.5rem] leading-[1.02] text-ink sm:text-[3.3rem] lg:text-[4.4rem]">
           {person.headline}
-        </p>
-        <p className="mt-4 max-w-2xl text-base leading-8 text-muted sm:text-lg">
+        </h3>
+        <p className="mt-5 max-w-2xl text-base leading-8 text-muted sm:text-lg">
           {person.tagline}
         </p>
-        <div className="mt-8 h-px w-full bg-line" />
-        <h4 className="mt-8 text-5xl leading-[0.94] text-ink sm:text-6xl lg:text-[4.75rem]">
+        <div className="mt-8 flex flex-wrap items-center gap-3">
+          <span className="rounded-full border border-line bg-canvas px-4 py-2 text-sm font-medium text-ink">
+            Node.js + Express
+          </span>
+          <span className="rounded-full border border-line bg-canvas px-4 py-2 text-sm font-medium text-ink">
+            Spring Boot + MySQL
+          </span>
+          <span className="rounded-full border border-line bg-canvas px-4 py-2 text-sm font-medium text-ink">
+            Authentication + API Design
+          </span>
+        </div>
+        <h4 className="mt-10 text-4xl leading-none text-ink sm:text-5xl lg:text-[3.9rem]">
           {person.name}
         </h4>
 
@@ -33,7 +40,7 @@ export function HeroSection() {
         <div className="surface-card surface-card-hover p-5 sm:p-6">
           <p className="eyebrow">Primary Focus</p>
           <p className="mt-3 text-xl leading-8 text-ink sm:text-2xl sm:leading-9">
-            Scalable API systems, secure authentication, and backend architecture built for practical use.
+            Backend systems that are secure, maintainable, and ready for real-world product use.
           </p>
         </div>
         <div className="surface-card surface-card-hover p-5 sm:p-6">

@@ -1,8 +1,8 @@
 export const person = {
   name: "J Akash Rao",
   role: "Backend-Focused Full Stack Developer",
-  headline: "Building scalable API systems using MERN and Spring Boot",
-  tagline: "Focused on authentication, backend architecture, and real-world systems",
+  headline: "Designing secure API systems and backend workflows for real-world products",
+  tagline: "Node.js, MERN, and Spring Boot focused on authentication, system structure, and reliable delivery",
   email: "akashrao.creates@gmail.com",
 };
 
@@ -23,13 +23,13 @@ export const projects = [
       "Contributed to backend system design",
     ],
     problem:
-      "The Civix platform needed a secure backend foundation for civic participation workflows, with reliable APIs and authentication supporting a broader internship-built product rather than an individual side project.",
+      "The internship team needed a dependable backend layer for civic participation workflows, with secure authentication and stable APIs supporting the broader Civix product.",
     approach:
-      "Focused on backend API design, authentication flows, request validation, and MongoDB-backed data handling inside the existing MERN application architecture.",
+      "Structured the backend around clear REST endpoints, validation, JWT-based access control, and cloud-hosted MongoDB data handling within the existing MERN architecture.",
     solution:
-      "Built and integrated REST APIs using Node.js and Express, connected the platform to MongoDB Atlas, and implemented JWT-based authentication and validation for secure request handling.",
+      "Built Express APIs, integrated MongoDB Atlas, and implemented JWT authentication with validation to support secure and consistent request handling.",
     outcome:
-      "Delivered backend functionality that strengthened the internship team project with cleaner API flows, secure authentication, and a more dependable system foundation for civic engagement use cases.",
+      "Strengthened the internship product with cleaner API flows, secure access control, and a more reliable backend foundation for civic engagement features.",
   },
   {
     title: "Data Visualization & Insights Platform",
@@ -42,13 +42,13 @@ export const projects = [
       "Filtering and aggregation support",
     ],
     problem:
-      "Raw CSV and JSON files are difficult to explore without a backend system that can process uploaded data and expose clean interfaces for analysis.",
+      "Raw datasets are hard to analyze when upload, transformation, and querying are handled manually or inconsistently.",
     approach:
-      "Took an API-first approach that separated upload handling, dataset processing, and queryable results so the platform could support interactive visual analysis.",
+      "Used an API-first design that separated file ingestion, data transformation, and query-ready outputs for the frontend reporting layer.",
     solution:
-      "Built dataset ingestion and processing APIs that transform uploaded files into structured records ready for charting, filtering, and aggregation.",
+      "Built backend ingestion and processing APIs that convert CSV and JSON uploads into structured records for charting, filtering, and aggregation.",
     outcome:
-      "Turned static datasets into an analysis workflow that supports clearer insight generation and more usable reporting interfaces.",
+      "Converted static files into a usable reporting workflow, making insight generation faster and more structured.",
   },
   {
     title: "Cloud-Based Fraud Detection System",
@@ -61,36 +61,51 @@ export const projects = [
       "Backend design for extensibility",
     ],
     problem:
-      "Fraud monitoring requires backend workflows that can evaluate transactions consistently, store results reliably, and keep detection logic maintainable.",
+      "Fraud detection requires backend services that can evaluate transactions consistently while keeping rules explicit and maintainable.",
     approach:
-      "Used a rules-first service design so fraud checks remained explicit, testable, and easier to extend as detection requirements evolve.",
+      "Applied a rules-first backend design so transaction checks remained understandable, testable, and easier to evolve over time.",
     solution:
-      "Developed a Spring Boot backend with SQL persistence to process transaction data and evaluate events against fraud detection rules.",
+      "Developed Spring Boot services with SQL persistence to process transactions and evaluate them against fraud detection rules.",
     outcome:
-      "Produced a backend-oriented fraud detection prototype that demonstrates Java service design, persistence integration, and structured business logic.",
+      "Produced a backend prototype that demonstrates structured Java service design, persistence integration, and maintainable fraud logic.",
   },
 ];
 
 export const skillGroups = [
   {
     title: "MERN Stack",
-    description: "For API development, integrations, and full stack delivery in JavaScript ecosystems.",
+    description: "API design, service integration, and production-style backend delivery in JavaScript ecosystems.",
     items: ["React.js", "Node.js", "Express.js", "MongoDB"],
   },
   {
     title: "Java Stack",
-    description: "For structured backend services, business logic, and database-driven applications.",
+    description: "Structured backend services, business logic, and database-driven application development.",
     items: ["Java", "Spring Boot", "MySQL"],
   },
   {
     title: "Core Backend Skills",
-    description: "Supporting capabilities that strengthen backend engineering and system implementation.",
+    description: "Backend fundamentals that support secure, maintainable, and scalable system design.",
     items: [
       "REST APIs",
       "JWT Authentication",
       "Spring Security (Basics)",
       "Data Structures & Algorithms",
     ],
+  },
+];
+
+export const engineeringPrinciples = [
+  {
+    title: "Start with contracts",
+    description: "Define API behavior, request boundaries, and data flow before implementation.",
+  },
+  {
+    title: "Design for trust",
+    description: "Build authentication, validation, and predictable backend behavior into the foundation.",
+  },
+  {
+    title: "Keep logic maintainable",
+    description: "Structure services so features can grow without turning core backend logic fragile.",
   },
 ];
 

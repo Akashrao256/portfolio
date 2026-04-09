@@ -28,13 +28,14 @@ export const ProjectCard = memo(function ProjectCard({
         <div>
           <p className="eyebrow">Project Case Study</p>
           <h3 className="mt-3 text-[2rem] leading-none text-ink sm:text-[2.35rem]">{title}</h3>
-          <p className="mt-3 max-w-3xl text-base leading-7 text-muted">
-            Structured backend-focused implementation with clear problem framing, system approach, and outcome.
-          </p>
+        </div>
+        <div className="surface-muted px-4 py-3">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-muted">Outcome Focus</p>
+          <p className="mt-2 max-w-[20rem] text-sm leading-6 text-ink">{outcome}</p>
         </div>
       </div>
 
-      <div className="grid gap-6 pt-6 xl:grid-cols-[0.9fr_1.1fr]">
+      <div className="grid gap-6 pt-6 xl:grid-cols-[0.88fr_1.12fr]">
         <div className="space-y-5">
           <div className="grid gap-4 sm:grid-cols-2">
             <ContentBlock label="Type" content={type} tone="strong" />
@@ -57,7 +58,7 @@ export const ProjectCard = memo(function ProjectCard({
           <ContentBlock label="Problem" content={problem} />
           <ContentBlock label="Approach" content={approach} />
           <ContentBlock label="Solution" content={solution} />
-          <ContentBlock label="Outcome" content={outcome} />
+          <ContentBlock label="Impact" content={outcome} tone="strong" />
         </div>
       </div>
 

@@ -59,6 +59,10 @@ body {
     @apply text-sm leading-7 text-muted sm:text-[15px];
   }
 
+  .body-strong {
+    @apply text-base leading-8 text-ink;
+  }
+
   .chip {
     @apply rounded-full border border-line bg-canvas px-4 py-2 text-sm font-medium text-ink transition-colors duration-200 hover:border-accent/40 hover:bg-white;
   }
