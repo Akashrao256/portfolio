@@ -2,6 +2,8 @@ export const person = {
   name: "J Akash Rao",
   role: "Backend-Focused Full Stack Developer",
   headline: "Designing and building scalable backend systems across MERN and Spring Boot ecosystems",
+  tagline:
+    "Building secure backend services and full-stack applications with strong API design, authentication, and maintainable system architecture",
   email: "akashrao.creates@gmail.com",
 };
 
@@ -13,8 +15,10 @@ export const heroActions = [
 export const projects = [
   {
     title: "Civix - Digital Civic Engagement Platform",
+    summary: "Built secure REST APIs and backend workflows for an internship civic engagement platform.",
     type: "Internship Project (Infosys Springboard)",
     role: "Backend Developer (MERN Stack)",
+    stack: ["Node.js", "Express", "MongoDB Atlas", "JWT"],
     highlights: [
       "Developed REST APIs using Node.js and Express",
       "MongoDB Atlas integration",
@@ -32,8 +36,10 @@ export const projects = [
   },
   {
     title: "Data Visualization & Insights Platform",
+    summary: "Built ingestion and reporting workflows that turn raw files into usable data views.",
     type: "Full Stack Project",
     role: "Full Stack Developer",
+    stack: ["React.js", "Node.js", "Express", "Charts"],
     highlights: [
       "CSV and JSON dataset upload workflows",
       "REST APIs for ingestion and processing",
@@ -51,8 +57,10 @@ export const projects = [
   },
   {
     title: "Cloud-Based Fraud Detection System",
+    summary: "Developed a backend prototype for rule-based fraud detection and transaction evaluation.",
     type: "Backend Project",
     role: "Backend Developer",
+    stack: ["Java", "Spring Boot", "SQL"],
     highlights: [
       "Java and Spring Boot backend services",
       "Rule-based fraud detection logic",
