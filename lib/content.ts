@@ -133,9 +133,42 @@ export const experiences = [
 ];
 
 export const certifications = [
-  { title: "Certification Title 01", href: "#" },
-  { title: "Certification Title 02", href: "#" },
-  { title: "Certification Title 03", href: "#" },
+  {
+    title: "Data Structures and Algorithms using Java",
+    issuer: "Infosys Springboard",
+    date: "Aug 2024",
+    href: "",
+  },
+  {
+    title: "Oracle Data Platform & Cloud Database",
+    issuer: "Oracle",
+    date: "Sep 2025",
+    href: "",
+  },
+  {
+    title: "Java Programming",
+    issuer: "CodSoft",
+    date: "Apr 2024",
+    href: "",
+  },
+  {
+    title: "SQL Development",
+    issuer: "Great Learning",
+    date: "Oct 2024",
+    href: "",
+  },
+  {
+    title: "Python Programming",
+    issuer: "Spoken Tutorial",
+    date: "Jun 2025",
+    href: "",
+  },
+  {
+    title: "JavaScript",
+    issuer: "OpenWeaver",
+    date: "Nov 2023",
+    href: "",
+  },
 ];
 
 export const workflowItems = [
