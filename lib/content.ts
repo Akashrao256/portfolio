@@ -137,37 +137,37 @@ export const certifications = [
     title: "Data Structures and Algorithms using Java",
     issuer: "Infosys Springboard",
     date: "Aug 2024",
-    href: "",
+    href: "https://drive.google.com/file/d/16WQdBwsDzIsLnYozQip8mwFiurYwyzMA/view",
   },
   {
     title: "Oracle Data Platform & Cloud Database",
     issuer: "Oracle",
     date: "Sep 2025",
-    href: "",
+    href: "https://drive.google.com/file/d/1KSnAyLk-iyMiJJhrVHConeLKoHUwDVaz/view",
   },
   {
     title: "Java Programming",
     issuer: "CodSoft",
     date: "Apr 2024",
-    href: "",
+    href: "https://drive.google.com/file/d/1dx1SP4VSlt7A6oj_WQofBBJx20ypg8st/view",
   },
   {
     title: "SQL Development",
     issuer: "Great Learning",
     date: "Oct 2024",
-    href: "",
+    href: "https://drive.google.com/file/d/1jM8ttVzFTQeAdGYLuFe-tKaIV8MUBF36/view",
   },
   {
     title: "Python Programming",
     issuer: "Spoken Tutorial",
     date: "Jun 2025",
-    href: "",
+    href: "https://drive.google.com/file/d/14CvC5zyHkpIiAkq_3M4Vb8SX1fU_3b_t/view",
   },
   {
     title: "JavaScript",
     issuer: "OpenWeaver",
     date: "Nov 2023",
-    href: "",
+    href: "https://drive.google.com/file/d/1vhrAwuKnRbqrpcafsDMRtgm4BIfhvjDl/view",
   },
 ];
 
