@@ -13,6 +13,8 @@ type ProjectCardProps = {
   approach: string;
   solution: string;
   outcome: string;
+  github: string;
+  demo?: string;
 };
 
 export const ProjectCard = memo(function ProjectCard({
@@ -26,6 +28,8 @@ export const ProjectCard = memo(function ProjectCard({
   approach,
   solution,
   outcome,
+  github,
+  demo,
 }: ProjectCardProps) {
   return (
     <article className="surface-card surface-card-hover overflow-hidden p-5 sm:p-7">
@@ -37,13 +41,17 @@ export const ProjectCard = memo(function ProjectCard({
           <div className="space-y-5 border-b border-line pb-6">
             <div>
               <p className="eyebrow">Project Case Study</p>
-              <h3 className="mt-3 text-[2rem] leading-none text-ink sm:text-[2.35rem]">{title}</h3>
-              <p className="mt-3 max-w-3xl text-base leading-7 text-muted">{summary}</p>
+              <h3 className="mt-3 text-[2rem] leading-none text-ink sm:text-[2.35rem]">
+                {title}
+              </h3>
+              <p className="mt-3 max-w-3xl text-base leading-7 text-muted">
+                {summary}
+              </p>
             </div>
 
             <div className="flex flex-wrap gap-3">
-              {stack.map((item) => (
-                <span key={item} className="chip">
+              {stack.map((item, index) => (
+                <span key={`${title}-stack-${index}`} className="chip">
                   {item}
                 </span>
               ))}
@@ -61,8 +69,11 @@ export const ProjectCard = memo(function ProjectCard({
             <div>
               <h4 className="text-lg text-ink">Implementation Highlights</h4>
               <ul className="mt-3 space-y-3 text-sm leading-6 text-muted">
-                {highlights.map((bullet) => (
-                  <li key={bullet} className="surface-muted px-4 py-3">
+                {highlights.map((bullet, index) => (
+                  <li
+                    key={`${title}-highlight-${index}`}
+                    className="surface-muted px-4 py-3"
+                  >
                     {bullet}
                   </li>
                 ))}
@@ -79,13 +90,19 @@ export const ProjectCard = memo(function ProjectCard({
         </div>
       </ExpandableContent>
 
+      {/* 🔥 Action Buttons (Always Visible) */}
       <div className="mt-4 flex flex-wrap gap-3">
-        <ButtonLink href="#" variant="primary">
-          GitHub
-        </ButtonLink>
-        <ButtonLink href="#" variant="secondary">
-          Live Demo
-        </ButtonLink>
+        {github && (
+          <ButtonLink href={github} variant="primary">
+            GitHub
+          </ButtonLink>
+        )}
+
+        {demo && (
+          <ButtonLink href={demo} variant="secondary">
+            Live Demo
+          </ButtonLink>
+        )}
       </div>
     </article>
   );
@@ -102,12 +119,16 @@ function ContentBlock({
 }) {
   return (
     <div
-      className={`surface-muted p-4 transition-colors duration-200 hover:bg-white ${
+      className={`surface-muted p-4 transition-colors duration-200 hover:bg-neutral-50 ${
         tone === "strong" ? "bg-white" : ""
       }`}
     >
       <p className="eyebrow">{label}</p>
-      <p className={`mt-3 leading-7 ${tone === "strong" ? "text-base text-ink" : "text-sm text-muted"}`}>
+      <p
+        className={`mt-3 leading-7 ${
+          tone === "strong" ? "text-base text-ink" : "text-sm text-muted"
+        }`}
+      >
         {content}
       </p>
     </div>

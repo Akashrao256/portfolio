@@ -15,6 +15,8 @@ export const heroActions = [
 export const projects = [
   {
     title: "Civix - Digital Civic Engagement Platform",
+    github: "https://github.com/Chamu-sist-27/team_a",
+    demo: "https://civix-demo.vercel.app", 
     summary: "Built secure REST APIs and backend workflows for an internship civic engagement platform.",
     type: "Internship Project (Infosys Springboard)",
     role: "Backend Developer (MERN Stack)",
@@ -36,6 +38,8 @@ export const projects = [
   },
   {
     title: "Data Visualization & Insights Platform",
+    github: "https://github.com/Akashrao256/DV_PLATFORM",
+    demo: "https://civix-demo.vercel.app", 
     summary: "Built ingestion and reporting workflows that turn raw files into usable data views.",
     type: "Full Stack Project",
     role: "Full Stack Developer",
@@ -57,6 +61,8 @@ export const projects = [
   },
   {
     title: "Cloud-Based Fraud Detection System",
+    github: "https://github.com/Akashrao256/Cloud-Based-Fraud-Detection-System",
+    demo: "https://civix-demo.vercel.app", 
     summary: "Developed a backend prototype for rule-based fraud detection and transaction evaluation.",
     type: "Backend Project",
     role: "Backend Developer",
