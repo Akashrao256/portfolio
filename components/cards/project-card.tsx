@@ -14,7 +14,7 @@ type ProjectCardProps = {
   solution: string;
   outcome: string;
   github: string;
-  demo?: string;
+  //demo?: string;
 };
 
 export const ProjectCard = memo(function ProjectCard({
@@ -29,7 +29,7 @@ export const ProjectCard = memo(function ProjectCard({
   solution,
   outcome,
   github,
-  demo,
+  //demo,
 }: ProjectCardProps) {
   return (
     <article className="surface-card surface-card-hover overflow-hidden p-5 sm:p-7">
@@ -98,11 +98,11 @@ export const ProjectCard = memo(function ProjectCard({
           </ButtonLink>
         )}
 
-        {demo && (
-          <ButtonLink href={demo} variant="secondary">
-            Live Demo
-          </ButtonLink>
-        )}
+    {/*{demo && (
+      <ButtonLink href={demo} variant="secondary">
+        Live Demo
+      </ButtonLink>
+    )}*/}
       </div>
     </article>
   );
