@@ -1,79 +1,104 @@
-# Developer Portfolio - J Akash Rao
+# Portfolio Website
 
-A modern, responsive portfolio website showcasing backend-focused full stack development work, projects, skills, and engineering principles. Built with **Next.js 15**, **React 19**, **TypeScript**, and **Tailwind CSS**.
+A modern, modular portfolio website built with **Next.js 15** and **React 19**. Designed to showcase projects, skills, and professional experience through a clean, responsive single-page interface.
 
-## 🎯 Overview
+## 📖 About This Project
 
-This is a professional developer portfolio site for **J Akash Rao**, a backend-focused full stack developer specializing in:
-
-- **MERN Stack** (React, Node.js, Express, MongoDB)
-- **Java Stack** (Spring Boot, MySQL)
-- REST API design, authentication, and scalable backend systems
-
-The portfolio highlights 3 major projects, certifications, internship experience, and engineering principles that guide backend development work.
+This is a portfolio website application that displays professional work and expertise through a structured, component-based interface. It provides a single-page experience with multiple customizable sections including projects, skills, experience, and contact information. The website is fully configurable—simply edit the content data to populate your own portfolio with your projects and information.
 
 ## ✨ Key Features
 
-- **Responsive Design**: Mobile-first layout using Tailwind CSS
-- **Smooth Navigation**: Single-page application with smooth scrolling between sections
-- **Project Showcase**: Detailed project cards with problem statements, approaches, and outcomes
-- **Skills Organization**: Grouped by technology stack with descriptions
-- **Certifications**: Links to verified credentials
-- **Engineering Philosophy**: Articulated core principles for backend development
-- **Contact Integration**: Quick access to email and social links
-- **Modern Stack**: Built with latest versions of Next.js 15 and React 19
+- **Responsive Design**: Mobile-first layout with Tailwind CSS, works seamlessly on all devices
+- **Single-Page Application**: Smooth scrolling navigation between sections without page reloads
+- **Modular Sections**: 10 independent sections (Hero, Projects, Skills, Experience, etc.)
+- **Project Showcase**: Detailed project cards with problem statements, solutions, and outcomes
+- **Skill Organization**: Skills grouped by technology stack with descriptions
+- **Flexible Content**: All content lives in a single TypeScript file—no database needed
+- **Expandable Components**: Built-in expandable content cards for detail-rich information
+- **Contact Integration**: Quick-access contact section with email and social links
 
-## 📋 Project Sections
+## 🛠 Tech Stack
 
-1. **Hero** - Introduction and call-to-action buttons
-2. **Projects** - Three featured projects:
-   - **Civix** - Digital civic engagement platform (MERN Stack)
-   - **Data Visualization Platform** - File ingestion and reporting system (React, Node.js)
-   - **Fraud Detection System** - Rule-based backend prototype (Java, Spring Boot)
-3. **Skills** - Organized by technology stack:
-   - MERN Stack
-   - Java Stack
-   - Core Backend Skills (REST APIs, JWT, Data Structures)
-4. **Engineering Approach** - Core principles:
-   - Start with contracts
-   - Design for trust
-   - Keep logic maintainable
-5. **Experience** - Internship roles at Infosys Springboard and KodNest
-6. **Certifications** - 6 verified credentials with direct links
-7. **AI Workflow** - Development approach using AI tools
-8. **About** - Personal background and development philosophy
-9. **Currently Building** - Active learning and development goals
-10. **Contact** - Email and social media links
+- **Next.js 15.2.4** - React framework with SSR and static generation
+- **React 19.0.0** - UI component library
+- **TypeScript 5.8.2** - Type-safe development
+- **Tailwind CSS 3.4.17** - Utility-first CSS framework
+- **PostCSS 8.5.3** - CSS processing and optimization
+- **Autoprefixer 10.4.20** - Automatic vendor prefixes
+
+## 🏗 Architecture
+
+The application follows a **component-driven, data-first architecture**:
+
+```
+Content Data (lib/content.ts)
+    ↓
+Section Configuration (lib/sections.ts)
+    ↓
+Layout Wrapper (components/layout/portfolio-shell.tsx)
+    ↓
+Section Components (components/sections/*)
+    ↓
+Card Components (components/cards/*)
+    ↓
+UI Components (components/ui/*)
+```
+
+**Data Flow:**
+
+1. All portfolio content is defined in `lib/content.ts`
+2. Section components import and render this content
+3. Layout wrapper orchestrates section display and navigation
+4. Sidebar navigation enables smooth scrolling between sections
+
+## 📱 Sections Overview
+
+The website consists of 10 primary sections:
+
+| Section                  | Purpose                                  |
+| ------------------------ | ---------------------------------------- |
+| **Hero**                 | Introduction with call-to-action buttons |
+| **Projects**             | Showcase of major work with details      |
+| **Skills**               | Technical skills grouped by stack        |
+| **Engineering Approach** | Core development principles              |
+| **Experience**           | Professional experience and roles        |
+| **Certifications**       | Credentials with verification links      |
+| **AI Workflow**          | Development methodology and tools        |
+| **About**                | Personal background and philosophy       |
+| **Currently Building**   | Current learning and development goals   |
+| **Contact**              | Email and social media links             |
+
+Each section is a standalone React component that can be independently customized or removed.
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js 18+
-- npm or yarn package manager
+- **Node.js** 18 or higher
+- **npm** or **yarn** package manager
 
-### Installation
+### Installation & Setup
 
-1. **Clone the repository** (if from git):
+1. **Clone the repository:**
 
-```bash
-git clone <repository-url>
-cd Portfolio
-```
+   ```bash
+   git clone <repository-url>
+   cd Portfolio
+   ```
 
-2. **Install dependencies**:
+2. **Install dependencies:**
 
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
-3. **Run the development server**:
+3. **Run the development server:**
 
-```bash
-npm run dev
-```
+   ```bash
+   npm run dev
+   ```
 
-The site will be available at `http://localhost:3000`
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ### Build for Production
 
@@ -82,7 +107,7 @@ npm run build
 npm start
 ```
 
-### Lint Code
+### Linting
 
 ```bash
 npm run lint
@@ -92,22 +117,25 @@ npm run lint
 
 ```
 Portfolio/
-├── app/
-│   ├── layout.tsx          # Root layout wrapper
-│   ├── page.tsx            # Homepage
-│   └── globals.css         # Global styles
+├── app/                          # Next.js app directory
+│   ├── layout.tsx               # Root layout component
+│   ├── page.tsx                 # Homepage entry point
+│   └── globals.css              # Global styles
+│
 ├── components/
-│   ├── cards/              # Card components
-│   │   ├── certification-card.tsx
-│   │   ├── empty-card.tsx
-│   │   ├── experience-card.tsx
-│   │   ├── project-card.tsx
-│   │   └── skill-card.tsx
-│   ├── layout/             # Layout components
-│   │   ├── portfolio-shell.tsx
-│   │   ├── section-header.tsx
-│   │   └── sidebar-nav.tsx
-│   ├── sections/           # Section components (one per section)
+│   ├── cards/                   # Reusable card components
+│   │   ├── project-card.tsx     # Project display component
+│   │   ├── skill-card.tsx       # Skill item component
+│   │   ├── experience-card.tsx  # Experience item component
+│   │   ├── certification-card.tsx # Certification item component
+│   │   └── empty-card.tsx       # Empty state placeholder
+│   │
+│   ├── layout/                  # Layout components
+│   │   ├── portfolio-shell.tsx  # Main application wrapper
+│   │   ├── section-header.tsx   # Section header component
+│   │   └── sidebar-nav.tsx      # Sidebar navigation
+│   │
+│   ├── sections/                # Page sections (one component per section)
 │   │   ├── hero-section.tsx
 │   │   ├── projects-section.tsx
 │   │   ├── skills-section.tsx
@@ -118,143 +146,150 @@ Portfolio/
 │   │   ├── about-section.tsx
 │   │   ├── currently-building-section.tsx
 │   │   └── contact-section.tsx
-│   └── ui/                 # Reusable UI components
-│       ├── button-link.tsx
-│       ├── cn.ts
-│       ├── expandable-content.tsx
-│       └── section-placeholder.tsx
+│   │
+│   └── ui/                      # Primitive UI components
+│       ├── button-link.tsx      # Link button component
+│       ├── expandable-content.tsx # Collapsible content component
+│       ├── section-placeholder.tsx # Empty section placeholder
+│       └── cn.ts                # Classname utility
+│
 ├── lib/
-│   ├── content.ts          # Portfolio data (person, projects, skills, etc.)
-│   └── sections.ts         # Section configuration
-├── package.json            # Dependencies and scripts
-├── tsconfig.json           # TypeScript configuration
-├── tailwind.config.ts      # Tailwind CSS configuration
-└── next.config.ts          # Next.js configuration
+│   ├── content.ts               # All portfolio content (EDIT THIS)
+│   └── sections.ts              # Section configuration and mapping
+│
+├── package.json
+├── tsconfig.json
+├── tailwind.config.ts           # Tailwind configuration
+├── next.config.ts               # Next.js configuration
+└── postcss.config.js            # PostCSS configuration
 ```
 
 ### Key Files
 
-- **[lib/content.ts](lib/content.ts)** - Central data file containing all portfolio content (person info, projects, skills, experience, certifications, etc.)
-- **[lib/sections.ts](lib/sections.ts)** - Section configuration and component mapping
-- **[components/layout/portfolio-shell.tsx](components/layout/portfolio-shell.tsx)** - Main layout wrapper
+- **[lib/content.ts](lib/content.ts)** - Central content file. Edit here to customize portfolio data (person info, projects, skills, experience, certifications, etc.)
+- **[lib/sections.ts](lib/sections.ts)** - Section definitions and component mapping. Controls which sections appear and their order
+- **[components/layout/portfolio-shell.tsx](components/layout/portfolio-shell.tsx)** - Root layout wrapper that manages navigation and section rendering
 - **[app/page.tsx](app/page.tsx)** - Homepage entry point
 
-## 🛠 Tech Stack
-
-### Frontend
-
-- **Next.js 15.2.4** - React framework with server-side rendering
-- **React 19.0.0** - UI library
-- **TypeScript 5.8.2** - Type safety
-- **Tailwind CSS 3.4.17** - Utility-first CSS framework
-- **PostCSS 8.5.3** - CSS processing
-- **Autoprefixer 10.4.20** - Browser vendor prefixes
-
-### Development Tools
-
-- **Node.js 18+** - JavaScript runtime
-- **npm** - Package manager
-
-## 📝 Customization
+## ⚙️ Customization
 
 ### Updating Portfolio Content
 
-All portfolio content is centralized in **[lib/content.ts](lib/content.ts)**:
-
-1. **Update personal info**:
+All portfolio content is centralized in `lib/content.ts`. Edit the following exports:
 
 ```typescript
-export const person = {
-  name: "Your Name",
-  role: "Your Role",
-  headline: "Your headline",
-  tagline: "Your tagline",
-  email: "your-email@example.com",
-};
-```
+// Personal/site info
+export const person = { name, role, headline, tagline, email }
 
-2. **Add/edit projects**: Update the `projects` array
-3. **Modify skills**: Update `skillGroups`
-4. **Update experience**: Modify `experiences` array
-5. **Add certifications**: Update `certifications` array
-6. **Edit principles**: Modify `engineeringPrinciples`
+// Hero CTA buttons
+export const heroActions = [{ label, href, variant }]
+
+// Featured projects
+export const projects = [{ title, role, stack, highlights, problem, approach, solution, outcome }]
+
+// Skill groups
+export const skillGroups = [{ title, description, items }]
+
+// Engineering principles
+export const engineeringPrinciples = [{ title, description }]
+
+// Experience entries
+export const experiences = [{ company, role, period, points }]
+
+// Certifications
+export const certifications = [{ title, issuer, date, href }]
+
+// Development workflow items
+export const workflowItems = [...]
+
+// Current goals
+export const currentlyBuilding = [...]
+
+// Contact links
+export const contactLinks = [...]
+```
 
 ### Styling
 
-Tailwind CSS is configured in [tailwind.config.ts](tailwind.config.ts). Customize:
+- **Global Styles**: Edit [app/globals.css](app/globals.css)
+- **Tailwind Config**: Customize colors, fonts, spacing in [tailwind.config.ts](tailwind.config.ts)
+- **Component Styles**: Each component uses Tailwind utility classes inline
 
-- Colors
-- Fonts
-- Spacing
-- Responsive breakpoints
+### Adding a New Section
 
-Global styles are in [app/globals.css](app/globals.css).
+1. Create a new file in `components/sections/your-section.tsx`
+2. Add the corresponding data export to `lib/content.ts`
+3. Add section definition to `sectionItems` array in `lib/sections.ts`:
+   ```typescript
+   {
+     id: "your-id",
+     title: "Your Section",
+     shortLabel: "11",
+     Component: YourSectionComponent
+   }
+   ```
 
-### Adding New Sections
+### Removing a Section
 
-1. Create a new component in `components/sections/your-section.tsx`
-2. Add to `sectionItems` array in [lib/sections.ts](lib/sections.ts)
-3. Add corresponding content to [lib/content.ts](lib/content.ts)
-
-## 🔗 Live Links
-
-- **Projects**: GitHub repositories linked in project cards
-- **Certifications**: Google Drive links for verified credentials
-- **Contact**: Email and social media in contact section
-
-## 📊 Portfolio Highlights
-
-### Technical Focus
-
-- Backend system design and REST API development
-- MERN and Java Spring Boot ecosystems
-- JWT authentication and security
-- Database integration (MongoDB, MySQL)
-
-### Development Approach
-
-- Contract-first API design
-- Security by default
-- Code maintainability and structure
-- Production-ready implementations
-
-### Tools & Methodology
-
-- AI-assisted code generation (Codex, Cursor)
-- Problem-first prompting approach
-- Code validation and refinement
-- Focus on architecture and code quality
+Delete the entry from `sectionItems` array in `lib/sections.ts`. The component file can remain unused or be deleted.
 
 ## 🚢 Deployment
 
-This Next.js application can be deployed to:
-
-- **Vercel** (recommended, seamless Next.js integration)
-- **Netlify** (with Next.js adapter)
-- **Docker** (containerized deployment)
-- **AWS**, **GCP**, **Azure** (with appropriate configurations)
-
-### Quick Vercel Deployment
+### Vercel (Recommended)
 
 ```bash
 npm install -g vercel
 vercel
 ```
 
-## 📧 Contact
+Vercel automatically detects Next.js and deploys with optimal settings.
 
-- **Email**: akashrao.creates@gmail.com
-- **GitHub**: See project links for more work
-- **LinkedIn**: Available in contact section
+### Netlify
 
-## 📄 License
+Build command: `npm run build`  
+Publish directory: `.next`
 
-This project is personal and proprietary. Unauthorized copying, modification, or distribution is not permitted without explicit written consent.
+### Docker
 
-## 🤝 Contributing
+```dockerfile
+FROM node:18-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci
+COPY . .
+RUN npm run build
+EXPOSE 3000
+CMD ["npm", "start"]
+```
 
-This is a personal portfolio. For suggestions or improvements to the portfolio itself, feel free to open discussions, but code modifications require owner approval.
+### Other Platforms
+
+- **AWS Amplify** - Connect Git repo for auto-deploy
+- **GitHub Pages** - Export as static site
+- **Self-hosted** - Run `npm run build && npm start` on any Node.js server
+
+## 📊 Performance Considerations
+
+- **Next.js Image Optimization**: Use `next/image` for images
+- **Code Splitting**: Sections load on-demand via dynamic imports
+- **CSS Optimization**: Tailwind purges unused styles in production
+- **Responsive Images**: Configure breakpoints in Tailwind config
+
+## 🔮 Future Improvements
+
+- Dark mode support
+- Search functionality to filter projects/skills
+- Blog or articles section
+- Dynamic theme color customization
+- Analytics integration
+- Email contact form submission
+- Testimonials section
+- Timeline component for experience
+
+## 📝 License
+
+This project is provided as-is for portfolio or reference purposes.
 
 ---
 
-**Built with Next.js 15 & React 19** | Last Updated: April 2026
+Built with Next.js 15 & React 19 | Last Updated: April 2026
