@@ -67,10 +67,10 @@ export function PortfolioShell({ sections }: PortfolioShellProps) {
 
   return (
     <div className="min-h-screen px-4 py-4 sm:px-6 sm:py-6 lg:px-8 lg:py-8">
-      <div className="mx-auto flex min-h-[calc(100vh-2rem)] max-w-[1600px] flex-col overflow-hidden rounded-shell border border-[#d7d1c5] bg-panel shadow-[0_24px_80px_rgba(28,25,23,0.08)] lg:min-h-[calc(100vh-4rem)] lg:flex-row">
+      <div className="mx-auto flex h-[calc(100vh-2rem)] max-w-[1600px] flex-col overflow-hidden rounded-shell border border-[#d7d1c5] bg-panel shadow-[0_24px_80px_rgba(28,25,23,0.08)] lg:h-[calc(100vh-4rem)] lg:flex-row">
         <SidebarNav activeSection={activeSection} sections={sections} />
 
-        <div className="min-w-0 flex-1 border-line lg:border-l">
+        <div className="min-w-0 flex-1 overflow-y-auto border-line lg:border-l">
           <SectionHeader title={activeTitle} />
 
           <main className="space-y-6 p-4 sm:p-6 lg:space-y-8 lg:p-8">{renderedSections}</main>
